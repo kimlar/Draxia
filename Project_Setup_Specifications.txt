@@ -1,0 +1,56 @@
+First thing to do is come up with a project name before starting on
+the project. RootDir is just a random project code name.
+Can later be changed when a good name is choosen.
+I.e: /RootDir as /Redwood
+
+Project file structure:
+
+	/RootDir
+				/
+					Assets
+					Docs
+					Game
+					Libs
+					Source
+							/
+								Project
+					Temp
+
+Assets: Art, Sound, Music, Icon etc.. (also unfinished draft and minor stuff)
+Docs: Ideas, app documents, planing, management etc..
+Game: The game root. Compiled binary and assets. Also DLLs from /Libs is copied.
+Libs: External libraries that the app depends on.
+Source: The source code directory.
+Temp: Intermediant build directory.
+
+Source structure:
+
+	../
+		Source/
+				file1.h
+				file1.cpp
+				file2.h
+				file2.cpp
+				...
+				
+				/Project
+					project.sln
+					project.vxproj
+					...
+
+Project files are stored in /Source/Project directory.
+Reason is to not pollute the /Source directory.
+
+In /Game directory the debug version of the exe-file has "_d" as postfix.
+I.e: MyGame_d.exe
+
+=====================================================================================================================
+IMPORTANT INFO:
+
+All projects are x64 and Unicode. Also use Precompiled Headers(PCH).
+Reasons:
+		x64:     Always use X64 (access to alot more memory at a negical performance cost)
+		Unicode: Always use UNICODE because Windows internally uses UNICODE so its a bit faster.
+		PCH:     Always use Precompiled Headers(PCH) for faster compile times -> faster coding iteration.
+=====================================================================================================================
+

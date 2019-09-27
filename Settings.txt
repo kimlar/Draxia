@@ -1,0 +1,20 @@
+# Video Options
+VideoResolution=1600x900
+Fullscreen=off
+VSync=on
+FastGPU=off
+
+# Sound Options
+MasterVolume=63
+VoiceVolume=27
+SoundEffectsVolume=67
+MusicVolume=79
+
+# Game Options
+ShowFPS=on
+
+# Controls
+MoveLeft=SDLK_LEFT
+MoveUp=SDLK_UP
+MoveRight=SDLK_RIGHT
+MoveDown=SDLK_DOWN
